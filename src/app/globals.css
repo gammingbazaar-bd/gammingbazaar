@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  /* Premium UI Button Variants */
+  .btn-primary {
+    @apply px-6 py-2.5 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-200 disabled:opacity-50;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-2.5 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-all duration-200;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300;
+  }
+
+  /* Form Inputs */
+  .input-premium {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 bg-gray-50 focus:bg-white transition-all duration-200 text-gray-900;
+  }
+
+/* Instant payment hide*/
+label.relative.cursor-pointer.rounded-xl.border-2.transition-all.duration-200.overflow-hidden.col-span-2.border-gray-200.hover\:border-pink-300.hover\:bg-pink-50 {
+    display: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out;
+}
+
+
+a.group.relative.flex.items-center.gap-3.px-3.py-2.rounded-xl.bg-gradient-to-r.from-red-500\/10.via-pink-500\/10.to-orange-500\/10.border.border-red-500\/20.hover\:border-red-400\/40.backdrop-blur-md.transition-all.duration-300.hover\:scale-\[1\.03\].hover\:shadow-lg.hover\:shadow-red-500\/10 {
+    margin-top: 11px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+}
