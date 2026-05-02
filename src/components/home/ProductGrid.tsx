@@ -9,7 +9,7 @@ export default function ProductGrid({ products }: { products: any[] }) {
             {products.map((item) => (
                 <div key={item.id} className="group relative transition-all duration-300 hover:-translate-y-2">
                     <Link href={`/topup/${item.code}`} className="block">
-                        <div className="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-#0f1a2e border border-gray-100">
+                        <div className="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-[#0f1a2e] border border-gray-100">
                             {/* Hover Overlay */}
                             <div className="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/10 transition-colors z-10 rounded-2xl"></div>
                             
