@@ -1,7 +1,7 @@
 export default function PrivacyPolicyPage() {
   import React from "react";
 
-export default function PrivacyPolicy() {
+
   const faqs = [
     {
       question: "What information do we collect?",
@@ -83,5 +83,5 @@ export default function PrivacyPolicy() {
       </div>
     </div>
   );
-}
+
 }
