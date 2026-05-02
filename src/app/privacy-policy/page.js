@@ -1,6 +1,7 @@
-export default function PrivacyPolicyPage() {
   import React from "react";
 
+
+export default function PrivacyPolicyPage() {
 
   const faqs = [
     {
