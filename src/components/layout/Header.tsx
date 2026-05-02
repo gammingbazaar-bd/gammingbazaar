@@ -85,7 +85,7 @@ export default function Header() {
         <img
           src="/src_assets/img/gaming bazaar.png"
           alt="Logo"
-          className="w-22 md:w-25 h-10 object-contain hover:scale-105 transition"
+          className="w-22 md:w-22 h-10 object-contain hover:scale-105 transition"
         />
       </Link>
 
