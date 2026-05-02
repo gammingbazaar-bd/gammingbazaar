@@ -1,45 +1,52 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // 🔁 API Proxy (Backend routing)
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
-        destination: 'https://backend.gammingbazaar.com/api/:path*',
+        source: "/api/:path*",
+        destination: "https://backend.gammingbazaar.com/api/:path*",
       },
       {
-        source: '/storage/:path*',
-        destination: 'https://backend.gammingbazaar.com/storage/:path*',
+        source: "/storage/:path*",
+        destination: "https://backend.gammingbazaar.com/storage/:path*",
       },
     ];
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       // Existing redirect
-  //       source: '/product/:slug',
-  //       destination: '/topup/:slug',
-  //       permanent: true,
-  //     },
-  //     {
-  //       // www to non-www redirect for all paths
-  //       source: '/:path*',
-  //       has: [
-  //         {
-  //           type: 'host',
-  //           value: 'www.gammingbazaar.com',
-  //         },
-  //       ],
-  //       destination: 'https://gammingbazaar.com/:path*',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+
+  // 🔀 Redirect rules
+  async redirects() {
+    return [
+      {
+        source: "/product/:slug",
+        destination: "/topup/:slug",
+        permanent: true,
+      },
+
+      // www → non-www redirect
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.gammingbazaar.com",
+          },
+        ],
+        destination: "https://gammingbazaar.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
+  // 🖼️ Optional (safe for production images)
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "backend.gammingbazaar.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
