@@ -22,7 +22,7 @@ export default function TopUpDetailsClient({ product }: { product: any }) {
     const [selectedRechargeType, setSelectedRechargeType] = useState("");
     const [totalAmount, setTotalAmount] = useState(0);
 
-    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null);
+    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>("");
     const [accountInfo, setAccountInfo] = useState<Record<string, string>>({});
     
     const [wallet, setWallet] = useState<any>(null);
