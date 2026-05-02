@@ -67,7 +67,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "FreeFire TopUp BD",
+              name: "Gaming Bazaar",
               url: "https://gammingbazaar.com/"
             })
           }}

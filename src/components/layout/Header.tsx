@@ -83,7 +83,7 @@ export default function Header() {
       {/* LOGO */}
       <Link href="/" className="flex items-center">
         <img
-          src="/src_assets/img/freefiretopupbd.png"
+          src="/src_assets/img/gaming bazaar.png"
           alt="Logo"
           className="w-20 md:w-20 h-15 object-contain hover:scale-105 transition"
         />
