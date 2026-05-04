@@ -731,15 +731,16 @@ useEffect(() => {
     
 
     {/* CONTENT */}
-    {product.description ? (
-      <div
-        className="prose prose-sm max-w-none mt-2
-        prose-p:text-slate-300
-        prose-strong:text-white
-        prose-li:text-slate-300
-        prose-headings:text-white"
-        dangerouslySetInnerHTML={{ __html: product.description }}
-      />
+   {product.description ? (
+  <div
+    className="prose prose-invert max-w-none mt-2
+    prose-h1:text-3xl
+    prose-h2:text-2xl
+    prose-h3:text-xl
+    prose-p:text-base
+    prose-a:text-primary"
+    dangerouslySetInnerHTML={{ __html: product.description }}
+  />
     ) : (
       <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-300">
 
