@@ -18,6 +18,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+      source: "/product/:slug",
+      destination: "/topup/:slug",
+      permanent: true,
+      },
+      {
         source: "/product/garena-free-fire-indonesia-top-up-in-bangladesh",
         destination: "/topup/free-fire-diamond-top-up-indonesia",
         permanent: true,
