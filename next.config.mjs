@@ -58,17 +58,17 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/shop/",
-        destination: "/topup",
-        permanent: true,
+      source: "/shop/:path*",
+      destination: "/topup",
+      permanent: true,
       },
       {
-        source: "/about-us/",
+        source: "/about-us/:path*",
         destination: "/about",
         permanent: true,
       },
       {
-        source: "/terms-conditions/",
+        source: "/terms-conditions/:path*",
         destination: "/privacy-policy",
         permanent: true,
       },
