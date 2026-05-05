@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 🔁 API Proxy (Backend routing)
+  // API Proxy
   async rewrites() {
     return [
       {
@@ -14,16 +14,66 @@ const nextConfig = {
     ];
   },
 
-  // 🔀 Redirect rules
+  // Redirects
   async redirects() {
     return [
       {
-        source: "/product/:slug",
-        destination: "/topup/:slug",
+        source: "/product/garena-free-fire-indonesia-top-up-in-bangladesh",
+        destination: "/topup/free-fire-diamond-top-up-indonesia",
+        permanent: true,
+      },
+      {
+        source: "/product/free-fire-indonesia-top-up",
+        destination: "/topup/free-fire-diamond-top-up-indonesia",
+        permanent: true,
+      },
+      {
+        source: "/product/netflix-gift-card-turkey-tl/",
+        destination: "/topup/netflix-tl-gift-card-bd",
+        permanent: true,
+      },
+      {
+        source: "/product/free-fire-bd-membership",
+        destination: "/topup/free-fire-weekly-membership-bd",
+        permanent: true,
+      },
+      {
+        source: "/product/ff-diamond-top-up",
+        destination: "/topup/free-fire-top-up",
+        permanent: true,
+      },
+      {
+        source: "/product/pubg-mobile-uc-station/",
+        destination: "/topup/pubg-uc-top-up-bd",
+        permanent: true,
+      },
+      {
+        source: "/product/free-fire-diamond-top-up-bd-bkash",
+        destination: "/topup/free-fire-top-up",
+        permanent: true,
+      },
+      {
+        source: "/product/fc-mobile-point-silver/",
+        destination: "/topup/fc-mobile-top-up-bd",
+        permanent: true,
+      },
+      {
+        source: "/shop/",
+        destination: "/topup",
+        permanent: true,
+      },
+      {
+        source: "/about-us/",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/terms-conditions/",
+        destination: "/privacy-policy",
         permanent: true,
       },
 
-      // www → non-www redirect
+      // www → non-www
       {
         source: "/:path*",
         has: [
@@ -38,7 +88,7 @@ const nextConfig = {
     ];
   },
 
-  // 🖼️ Optional (safe for production images)
+  // Images
   images: {
     remotePatterns: [
       {
