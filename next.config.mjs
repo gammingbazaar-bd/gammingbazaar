@@ -53,7 +53,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/product/free-fire-diamond-top-up",
+        destination: "/topup/free-fire-top-up",
+        permanent: true,
+      },
+      {
         source: "/product/free-fire-diamond-top-up-bd-bkash",
+        destination: "/topup/free-fire-top-up",
+        permanent: true,
+      },
+      {
+        source: "/product/free-fire-top-up-bangladesh",
         destination: "/topup/free-fire-top-up",
         permanent: true,
       },
