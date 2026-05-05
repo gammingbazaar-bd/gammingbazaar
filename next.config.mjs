@@ -33,6 +33,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/product/unipin-voucher-bd-server/",
+        destination: "/topup/unipin-uc-buy-bd",
+        permanent: true,
+      },
+      {
         source: "/product/free-fire-bd-membership",
         destination: "/topup/free-fire-weekly-membership-bd",
         permanent: true,
