@@ -28,12 +28,12 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/netflix-gift-card-turkey-tl/",
+        source: "/product/netflix-gift-card-turkey-tl",
         destination: "/topup/netflix-tl-gift-card-bd",
         permanent: true,
       },
       {
-        source: "/product/unipin-voucher-bd-server/",
+        source: "/product/unipin-voucher-bd-server",
         destination: "/topup/unipin-uc-buy-bd",
         permanent: true,
       },
@@ -48,7 +48,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/pubg-mobile-uc-station/",
+        source: "/product/pubg-mobile-uc-station",
         destination: "/topup/pubg-uc-top-up-bd",
         permanent: true,
       },
@@ -58,7 +58,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/fc-mobile-point-silver/",
+        source: "/product/fc-mobile-point-silver",
         destination: "/topup/fc-mobile-top-up-bd",
         permanent: true,
       },
