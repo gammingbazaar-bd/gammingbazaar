@@ -73,11 +73,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/terms-conditions/:path*",
-        destination: "/privacy-policy",
-        permanent: true,
-      },
-      {
       source: "/product/:slug",
       destination: "/topup/:slug",
       permanent: true,
