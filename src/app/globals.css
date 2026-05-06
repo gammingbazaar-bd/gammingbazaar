@@ -55,4 +55,17 @@ a.group.relative.flex.items-center.gap-3.px-3.py-2.rounded-xl.bg-gradient-to-r.f
 }
 
 
+#support-button {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  transition: bottom 0.35s ease;
+  z-index: 9998;
+}
+
+/* popup visible হলে উপরে উঠবে */
+body.install-popup-visible #support-button {
+  bottom: 190px;
+}
+
 }

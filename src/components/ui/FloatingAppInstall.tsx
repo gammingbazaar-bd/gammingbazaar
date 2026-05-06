@@ -52,6 +52,18 @@ export default function FloatingAppInstall() {
     })
   }, [])
 
+  useEffect(() => {
+  if (showInstall && !isDismissed) {
+    document.body.style.setProperty('--install-offset', '88px')
+  } else {
+    document.body.style.setProperty('--install-offset', '0px')
+  }
+
+  return () => {
+    document.body.style.setProperty('--install-offset', '0px')
+  }
+}, [showInstall, isDismissed])
+
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
@@ -94,7 +106,7 @@ export default function FloatingAppInstall() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 80, scale: 0.95 }}
           transition={{ type: 'spring', damping: 22, stiffness: 180 }}
-          className="fixed bottom-20 left-2 right-2 z-[9999] md:left-auto md:right-6 md:w-[380px]"
+          className="fixed bottom-20 left-2 right-2 z-[9999] md:hidden"
         >
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#0b1224] shadow-2xl backdrop-blur-xl">
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSiteSettings } from '@/context/SiteSettingsContext';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaEnvelope, FaHome, FaWallet, FaList, FaUser, FaTicketAlt, FaBolt } from 'react-icons/fa';
@@ -8,6 +8,21 @@ export default function Footer() {
     const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user-info') || 'null') : null;
     const siteSettings = useSiteSettings();
     const [isSupportOpen, setIsSupportOpen] = useState(false);
+    const [installVisible, setInstallVisible] = useState(false);
+
+    useEffect(() => {
+  const checkInstallPopup = () => {
+    setInstallVisible(
+      document.body.classList.contains('install-popup-visible')
+    );
+  };
+
+  checkInstallPopup();
+
+  const interval = setInterval(checkInstallPopup, 200);
+
+  return () => clearInterval(interval);
+}, []);
 
     if (!siteSettings?.contact_info) {
         return <div className="p-4 text-center text-gray-500">Loading footer...</div>;
@@ -119,11 +134,16 @@ export default function Footer() {
   </div>
 
   {/* FLOATING SUPPORT */}
-  <div className="fixed bottom-20 md:bottom-6 right-4 z-50 flex items-center gap-2">
 
     {/* ================= PREMIUM FLOATING SUPPORT ================= */}
-<div className="fixed bottom-20 md:bottom-6 right-4 z-50 flex flex-col items-end gap-3">
+    <div
+  id="support-button"
+  className="fixed right-4 z-50 flex flex-col items-end gap-3 transition-all duration-300"
+  style={{
+    bottom: 'calc(74px + var(--install-offset, 0px))'
+  }}
 
+>
   {/* Action Buttons */}
   {isSupportOpen && (
     <div className="flex flex-col gap-2 animate-in slide-in-from-bottom-2 duration-300">
@@ -166,7 +186,6 @@ export default function Footer() {
 
   </button>
 
-</div>
 
   </div>
 
